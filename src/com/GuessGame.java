@@ -19,39 +19,32 @@ public class GuessGame {
         int number = r.nextInt(100);
 
 
-        //System.out.println(num);
+        System.out.println(number);
 
         input = JOptionPane.showInputDialog("Guess the number I am thinking about");
 
 
         do {
             try {
-
+                if (input == null || input.isEmpty()) {
+                    System.out.println("Cancel");
+                    return;
+                }
                 guess = Integer.parseInt(input);
                 if (guess > number) {
                     int textIndexHigh = r.nextInt(highList.size());
                     input = JOptionPane.showInputDialog(highList.get(textIndexHigh));
-
                 } else if (guess < number) {
                     int textIndexLow = r.nextInt(lowList.size());
                     input = JOptionPane.showInputDialog(lowList.get(textIndexLow));
-
                 }
-            } catch ( Exception e) {
+            } catch (NumberFormatException e) {
                 e.printStackTrace();
-                return;
-                //JOptionPane.showMessageDialog(null, "Wrong Character");
-                //break;
-                //JOptionPane.showMessageDialog(1, "Wrong character");
-                //guess = Integer.parseInt(input);
+                input = JOptionPane.showInputDialog("Noob");
             }
-        }
+        } while (guess != number);
 
-        while (guess != number);
-
-        if (guess == number) {
-            JOptionPane.showMessageDialog(null, "Correct");
-        }
+        JOptionPane.showMessageDialog(null, "Correct");
     }
 
     public static List<String> fillList (boolean isHigh) {
