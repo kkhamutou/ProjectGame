@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView cache="true" fitHeight="600.0" fitWidth="400.0" pickOnBounds="true">
+         <image>
+            <Image url="@image.jpg" />
+         </image>
+         <effect>
+            <Glow level="0.19" />
+         </effect>
+      </ImageView>
+      <Button fx:id="startGame" blendMode="GREEN" ellipsisString="" layoutX="75.0" layoutY="110.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="250.0" styleClass="map-pin" text="START GAME" textAlignment="CENTER" />
+      <Button fx:id="highScore" blendMode="GREEN" layoutX="75.0" layoutY="200.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="250.0" text="HIGH SCORES" />
+      <Button fx:id="settings" blendMode="GREEN" layoutX="75.0" layoutY="290.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="250.0" text="SETTINGS" />
+      <Button fx:id="exite" blendMode="GREEN" layoutX="75.0" layoutY="380.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="250.0" text="EXITE" />
+   </children>
+</AnchorPane>
