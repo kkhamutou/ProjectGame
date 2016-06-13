@@ -1,4 +1,4 @@
-package com.andAnotherOne;
+package com.andAnotherOne.iProject;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

@@ -1,6 +1,5 @@
-package com.andAnotherOne;
+package com.andAnotherOne.iProject;
 
-import com.andAnotherOne.ConfirmBox;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

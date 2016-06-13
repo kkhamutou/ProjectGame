@@ -1,17 +1,18 @@
-package com.andAnotherOne;
+package com.andAnotherOne.iProject;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 /**
  * Created by kirylkhamutou on 09/06/16.
  */
-public class ListingForSelectionChanges extends Application {
+public class CheckBox12DropDownMenu extends Application {
 
     Stage window;
     Scene scene;
@@ -38,9 +39,7 @@ public class ListingForSelectionChanges extends Application {
         //Set default value
         choiceBox.setValue("Apples");
 
-        //Listen for Selection changes
-        choiceBox.getSelectionModel().selectedIndexProperty().addListener( (v, oldValue, newValue) -> System.out.println(newValue) );
-
+        button.setOnAction(e -> getChoice(choiceBox));
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
@@ -50,4 +49,11 @@ public class ListingForSelectionChanges extends Application {
         window.setScene(scene);
         window.show();
     }
+
+    //To get the value of the selected item
+    private void getChoice(ChoiceBox<String> choiceBox) {
+        String food = choiceBox.getValue();
+        System.out.println(food);
+    }
+
 }
